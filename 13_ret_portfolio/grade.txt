@@ -1,0 +1,88 @@
+Grading at 07/15/2020:20:49:36.977892
+For commit ID 4be99660d2b0b4a1f935912aefbf555431615a29
+Grading at Wed Jul 15 16:49:25 EDT 2020
+retirement.c and retirement.h exist (good)
+Attempting to compile
+rm -f *~ *.o ret_portfolio
+gcc -o ret_portfolio -std=gnu99 -pedantic -Wall -Werror -ggdb3 retirement.c -lm
++-----------------------------------------------------------------------+
+Test case 1
+Input Error
+Your program successfully indicated a failure case
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 2
+Could not open File 1: No such file or directory
+Your program successfully indicated a failure case
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 3
+Could not open File 2: No such file or directory
+Your program successfully indicated a failure case
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 4
+Input Error
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 5
+Input InvalidYour program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 6
+Valgrind reported memory errors
+Your program did not indicate a failure case
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 7
+Valgrind reported memory errors
+Your program did not indicate a failure case
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 8
+Your program did not indicate a failure case
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 9
+Your file matched the expected output
+                                                         [35/35]
++-----------------------------------------------------------------------+
+Test case 10
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 11
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 12
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 13
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 14
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 15
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Code quality
+Abstration:    OK
+Naming:        Excellent
+Formatting:    Good
+Documentation: Excellent
+Comments from your grader:
+Generally good abstraction. main is pretty long—you could abstract out the initialization of your ret_portfolio_t's. No function pointer.
+Good variable and function names, except that functions should typically begin with a lowercase letter.
+Formatting is OK, but there are inconsistent indentations and a few weird blank lines. Consider clang-format, either upon saving in emacs or using the tool directly.
+Great job commenting what each function does, maybe even a little more info for each one.
+                                                         [8.9/10]
++-----------------------------------------------------------------------+
+
+Overall Grade: 93

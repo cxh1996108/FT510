@@ -1,0 +1,69 @@
+In the standard template library, std::set and std::map are
+implemented as binary search trees. This assignment is a classic
+programming task, for which you will find the map ADT useful. See the
+documentation here: http://www.cplusplus.com/reference/map/map
+
+For this assignment, you will write a program "rand_story" that
+generates a random story, given a story template and a list of words.
+
+The program named "rand_story" takes three command line arguments, the 
+filename of the story template, the filename of the word list, and an
+integer, which is the seed for the pseudorandom number generation and
+must be 1 or greater. The story template will have some blanks that
+begin and end with an underscore ("_"). If the blank names a category,
+your program should replace this blank with a word from the word list
+of the appropriate category. If the blank has a positive integer
+instead, your program should replace this blank with the word used
+that many blanks ago. (If the blank is _1_, it should be filled in
+with the previous word.) Your program should print the story to
+stdout. 
+
+For example, if you look at the first two lines of story.txt, you will
+see:
+
+Once upon a _time_, there was a _animal_. The _1_ lived in a very
+_adjective_ _place_.
+
+If the provided file of categories and words were:
+
+animal:dragon
+animal:cat
+place:cave
+time:minute
+time:month
+adjective:peculiar
+adjective:scary
+adjective:peaceful
+
+The program might produce:
+
+Once upon a month, there was a dragon. The dragon lived in a very
+peaceful cave.
+
+At a high level, your program should do two steps: 1) read and store
+the categories and words in a data structure and 2) read the story
+template, parsing each blank and selecting an appropriate word.
+
+To generate a pseudorandom number, see
+http://www.cplusplus.com/reference/cstdlib/rand
+
+Spend time planning first! Think about any classes you might like to
+have and what functions you would like them to perform. I made a class
+Story with fields for the template and category map, as well as helper
+functions to read in the story, generate the map of categories, and
+replacing a category with a random word from that category. This class
+has a constructor and publid tellStory method, which takes an unsigned
+integer for the random seed. Think about how you will keep track of
+used words--I used an additional category "used" in the map.
+
+If you test your program using the given sample files:
+./rand_story story.txt words.txt 1
+you should get the output in output.txt.
+
+Of course, you should test your program on more inputs than just
+these, making sure it handles a variety of invalid inputs by printing
+an appropriate error message and exiting failure. As always, it should
+valgrind cleanly.
+
+You should submit a Makefile that compiles your program into a binary
+called rand_story as its default target. 

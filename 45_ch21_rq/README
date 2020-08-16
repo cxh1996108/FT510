@@ -1,0 +1,98 @@
+As always, read and understand Chapter 21, then answer these questions
+in "answers.txt".
+
+1.  Which of the following is not a common type of linked list? 
+
+    A.  singly linked
+    B.  doubly linked
+    C.  circular 
+    D.  measurable
+    E.  None of the above (all are common types of linked lists)
+
+2.  What can you add to your linked list class to make the "add to
+    back" operation more efficient? 
+
+    A.  previous pointers 
+    B.  skip pointers 
+    C.  a tail pointer
+    D.  a backup list pointer
+    E.  None of the above
+
+3.  With respect to linked lists, iterators provide a nice combination
+    of which two desireable features? 
+
+    A.  Easy debugging and short functions/methods
+    B.  Documentation and code re-use
+    C.  Testing and readability
+    D.  Abstraction and performance
+    E.  None of the above
+
+4.  C++'s std::list is what kind of list?
+
+    A.  singly linked
+    B.  doubly linked
+    C.  circular 
+    D.  measurable
+    E.  None of the above 
+
+5.  What method in std::list would you use to get an iterator which
+    refers to the start of the list? 
+
+    A.  begin
+    B.  start_iterator
+    C.  iterator
+    D.  start
+    E.  None of the above
+
+6.  What method in std::list would you use to add an element to the
+    end of the list? 
+
+    A.  add_back
+    B.  add
+    C.  push_back
+    D.  pop_back
+    E.  end
+    F.  None of the above
+
+7.  Suppose you have an iterator (it) which refers to an element in a
+    std::list (lst). You want to remove the element that it refers to
+    from lst. What would you write? 
+
+    A.  it.remove();
+    B.  delete it;
+    C.  lst.delete(it);
+    D.  lst.erase(it);
+    E.  None of the above
+
+8.  After doing correct action for the previous question, which
+    iterators are invalidated? 
+
+    A.  All iterators on the specific std::list from which the element
+        was removed. 
+    B.  All iterators which reference the removed element, or the
+        element immediately before or after it. 
+    C.  All iterators which reference the removed element.
+    D.  Only the particular iterator which was used to remove the
+        element (it) 
+    E.  No iterators are invalidated
+
+For the following two questions, consult cplusplus.com, and use the
+documentation to compare std::list and std::vector.
+
+9.  Which one of the following is a member function of std::vector but
+    not std::list?
+
+    A.  front
+    B.  back
+    C.  operator[]
+    D.  get
+
+10. Consider the time complexity of the insert operation for std::list
+    and std::vector. What is the advantage of using std::list when
+    performing this operation? 
+
+    A.  A list can hold more elements.
+    B.  A list does not need to copy the elements after the insert
+    	position. 
+    C.  A list can add at an arbitrary position.
+    D.  A list does not need to copy the inserted elements.

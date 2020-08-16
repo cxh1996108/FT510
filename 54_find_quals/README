@@ -1,0 +1,79 @@
+For this assignment, you will write part of a "dating app," which
+reads in a list of profiles and qualities you're looking for and
+prints those profiles that match.
+
+As you have learned, inserting items into a hash table is a constant
+time operation. If you have an algorithm that uses a set and inserts
+many elements, a hash table may be useful. Note that testing for
+inclusion in the set and removing one element are also constant
+time. This assignment will guide you through using the STL's
+std::unordered_set container. Note: this is part of the C++11
+standard, so you will compile with the -std=c++11 flag.
+
+The program should take two command line arguments: 1) the name of a
+file with all possible profiles, listed as comma-separated username,
+age, height, attractiveness, and interests (no fixed number), and 2)
+the name of a file with qualities you are looking for in a date,
+listed as minimum age, maximum age, minimum height, maximum height,
+minimum attractiveness, maximum attractiveness, and nonnegotiable
+interests. See input.csv and quals.csv for examples of each.
+
+Write your main program in find.cpp, where you are provided some
+helper functions to do the parsing. (Note: you do not need to improve
+the error detection of the parsing functions--we will not test with
+improperly formatted files.) At a high level, main should
+  - Open files for reading
+  - Read all the profiles (using the provided helper function)
+  - Read requested qualities from the file (using the provided helper
+    function) 
+  - Remove any profiles that don't match the requested qualities
+  - Print the profiles that match
+
+In profile.hpp, you are provided with a Qualities class, which
+encapsulates the qualities a given match is searching for. The class
+Profile interface is given, and you should implement the following
+member functions in profile.cpp:
+  - Constructor for Profile, which takes four parameters and
+    initializes these fields.
+  - addInterest, which takes an interest and adds it to the set of
+    interests for that Profile
+  - operator==, which is needed for this class to be used in a hash
+    table
+  - isMatch, which checks if the current Profile meets the Qualities
+    requested and returns true if so and false if not. Age, height,
+    and attractiveness must be in the given ranges (inclusive, i.e. it
+    is fine if q.attr_max is 8, and the profile has attractiveness
+    8). To be a match, all of the requested interests in q.inter_req
+    must be in the Profile's set of interests.
+  
+There are some missing declarations in profile.hpp. In order to
+instantiate an unordered_set with a particular key type (in this case,
+Profile), the hash table needs a way to hash the key and test for
+equality. If the key is one for which std::hash is already defined,
+you're set. If not, you need to create an explicit specialization of
+std::hash, as:
+
+template<>
+struct std::hash<Profile> {
+  size_t operator()(const Profile & rhs) const {
+  // how to hash this class
+  }
+};
+
+For Profile, the username must be unique, so you can hash this
+string.
+
+You may want to declare struct std::hash<Profile> a friend of your
+Profile class. In this case, the compiler needs to see
+std::hash<Profile> before the class definition of Profile, by writing
+
+template<>
+struct std::hash<Profile>;
+
+(Of course, before that, you need to declare the class Profile.)
+
+Once you have written this program, you can test it by doing
+
+./find_quals input.csv quals.csv
+
+and the output should match that in output.txt.

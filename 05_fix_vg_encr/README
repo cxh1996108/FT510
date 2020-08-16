@@ -1,0 +1,17 @@
+In this assignment, you are going to work on a Ceaser Cipher
+encryption program that reads an input file and writes encrypted
+output to an output file. The output file name is ".enc" appended to
+the input file name (for example, if your input file is called
+"input.txt", it will write to "input.txt.enc"). 
+
+This program, which is is included in encrypt.c, has the basic
+algorithm correct, but makes a variety of errors---all of which
+valgrind will detect. Your job for this problem is to fix the program
+by making it valgrind cleanly. 
+
+Hint: Start from the first valgrind error. Read and understand the
+      error. It will tell you on what line of code valgrind detected
+      the problem. To understand the error and why it is occuring,
+      drawing some pictures will likely help. Fix the error, make, and
+      re-run. Repeat the process until all valgrind errors are
+      gone. Don't forget that gdb may be useful as well.

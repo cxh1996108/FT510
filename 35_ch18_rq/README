@@ -1,0 +1,112 @@
+As always, read and understand Chapter 18, then answer these questions
+in "answers.txt". 
+
+1.  What does "protected" mean?
+    A.  It means the same as "private".
+    B.  It means the same as "private", except that classes/methods
+        declared as "friend" are prohibited from accessing protected
+	members. 
+    C.  It means that the class and its children may access the
+        members, but nothing else (except friends).
+    D.  It means that the class and its parent class may access the
+        members, but nothing else (except friends).
+
+The following two questions refer to the following code:
+
+  class Animal {...};
+  class Cat : public Animal {...};
+
+  Animal * a = new Animal();
+  Cat * c = new Cat();
+
+2.  Consider the following statements:
+
+    I.   Animal * w = c;
+    II.  Cat    * x = a;
+    III. Animal   y = *c;
+    IV.  Cat      z = *a;
+
+    Which of the above statement(s) does subtype polymorphism permit
+    in C++? 
+
+    A.  Only I
+    B.  Only II
+    C.  I and II
+    D.  I and III
+
+3.  If you were to do
+
+      delete c;
+      
+    which destructors would be run, in what order?
+
+    A.  No destructors would happen, since Cat is POD.
+    B.  Cat's destructor (only).
+    C.  Animals's destructor (only)
+    D.  Cat's destructor, then Animal's destructor.
+    E.  Animal's destructor, then Cat's destructor.
+
+4.  What does "dynamic dispatch" mean?
+
+    A.  Which method is called is determined by the actual (runtime)
+        type of the object on which the method is invoked.
+    B.  Which method is called is determined by the static (compile
+        time) type of the object on which the method is invoked.
+    C.  Which method is called is determined by the dynamic trends in
+        dispatch rates.
+    D.  None of the above
+
+5.  What does it mean to write " = 0" at the end of a method
+    declaration? 
+
+    A.  The method always returns zero.
+    B.  The method will be defined in a template, which is written
+        later. 
+    C.  The method is abstract (aka pure virtual).
+    D.  None of the above
+
+6.  Which of the following is a good guideline when designing your
+    inheritance hierarchy? 
+
+    A.  Separate each method out into its own class.
+    B.  Push common members as far up the hierarchy as possible.
+    C.  Avoid writing abstract classes.
+    D.  Do not use dynamic dispatch unless you absolutely must.
+
+7.  What does "virtual" mean in a method declaration?
+
+    A.  The method is not real, but is just a place holder.
+    B.  The method does not have effects on state outside of its own
+        class. 
+    C.  The method will be dynamically dispatched in this class and
+        its children. 
+    D. None of the above
+
+8. In C++, if you need a child class to pass parameters to its parent 
+   class's constructor, how do you do so?
+
+   A.  You cannot--it must use the default constructor.
+   B.  When it declares that it inherits from its parent class (i.e.,
+       class X: public Y), you put parenthesis and the constructor
+       arguments right after the parent class name there. 
+   C.  You write the parent class name, with the parameters in
+       parentheses in the first position of the initializer list. 
+   D.  You call super() and pass paremetsr to it as the first line of
+       the constructor. 
+
+9.  Abstract classes cannot be instantiated; however, they are quite
+    useful. Which other language features make them so useful?
+
+    A.  Templates and iterators
+    B.  Subtype polymorphism and dynamic dispatch
+    C.  Operator overloading and references
+    D.  None of the above
+      
+10. What should you always have in any base class which you will use
+    with subtype polymorphism? 
+
+    A.  An implicit conversion constructor from its child classes
+    B.  A virtual destructor
+    C.  An overloaded operator= to convert between pointers and
+        references 
+    D.  A default template parameter

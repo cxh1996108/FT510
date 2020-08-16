@@ -1,0 +1,20 @@
+Grading at 07/28/2020:03:45:38.953022
+For commit ID 15d51318bda1e3b1aa019d3aabdbd50eb14bfb15
+Grading at Mon Jul 27 23:45:38 EDT 2020
+Comparing answer1.txt
+Your file matched the expected output
+ answer1.txt is correct
+Comparing answer2.txt
+Your file matched the expected output
+ answer2.txt is correct
+Comparing answer3.txt to one possible solution
+ (two child delete uses left, then all the way right)
+Line_1_did_not_match
+Line_3_did_not_match
+Your file did not match the expected output
+Comparing answer3.txt to the other possible solution
+ (two child delete uses right, then all the way left)
+Your file matched the expected output
+ answer3.txt is correct
+
+Overall Grade: PASSED

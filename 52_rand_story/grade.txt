@@ -1,0 +1,100 @@
+Grading at 07/29/2020:10:00:55.518837
+For commit ID 4064e865606453c198c6818d8be7665d1563598e
+Grading at Wed Jul 29 06:00:36 EDT 2020
+running passed-in stu_imp ./rand_story
+[32mSuccessfully compiled.[0m
+********************test case 1********************
+No command line args
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 1[0m
+********************test case 2********************
+Too few command line args
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 2[0m
+********************test case 3********************
+Too many command line args
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 3[0m
+********************test case 4********************
+Invalid story file
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 4[0m
+********************test case 5********************
+Invalid words file
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 5[0m
+********************test case 6********************
+Invalid random seed
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 6[0m
+********************test case 7********************
+Random seed 1
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 7[0m
+********************test case 8********************
+Random seed 13
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 8[0m
+********************test case 9********************
+Random seed 27
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 9[0m
+********************test case 10********************
+Random seed 32
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 10[0m
+********************test case 11********************
+Random seed 48
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 11[0m
+********************test case 12********************
+Random seed 99
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 12[0m
+********************test case 13********************
+Number refers past beginning of story
+Exit status of your code: 1
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 13[0m
+********************test case 14********************
+Words file with invalid syntax
+Exit status of your code: 1
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 14[0m
+********************test case 15********************
+Story file with nonexistent category
+Exit status of your code: 1
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 15[0m
+********************test case 16********************
+Word file with long words
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 16[0m
+[32msuccessfully passed all 16 test cases[0m
+Overall Grade: A

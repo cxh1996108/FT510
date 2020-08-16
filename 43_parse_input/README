@@ -1,0 +1,55 @@
+In this assignment, you are going to write a program to parse input
+from a file and throw an appropriate exception if the file does not
+have the correct format.
+
+In the file "parse.cpp", write a program that has the following
+functionality and a Makefile that compiles it into an executable
+"parse_input". This program should take exactly one command line
+argument--the name of the file to read. The file contains a list of
+keys and their values (this will represent tasks and their
+preceding tasks in a future assignment). Your program should read each 
+line, which has the following format: 
+
+key1: value1, value2
+
+The line must have a key, which is any characters preceding the colon
+(:) and may be the empty string. Next is a list of keys, of which
+there may be zero or more, delimited by a comma-space (, ). If there
+are any values, a space follows the colon, and each value is the
+substring from two characters past the delimiter until a comma or
+newline. See simple.txt for an example.
+
+If any line in the file does not follow this format, your program
+should throw a custom "invalid_input" exception, which you will write,
+extending std::exception and overriding the what() method. The
+function with a try/catch block should print the contents of what() to
+std::cerr. With the exception handled, your program should continue
+parsing the next line. 
+
+Read each line in the file into an item_t, a pair of strings and
+vector of strings. Practice dynamic allocation by allocating an item_t
+* for each line read, storing these pointers in a vector. Once you
+have parsed the whole file, print out the dependencies with the
+following format: 
+
+key = key1
+  values = value1; value2 
+
+See simple.out for an example of the output from reading simple.txt.
+
+Your program should use good abstraction. There should be separate
+functions to read each line from the file called "parseLine" (throwing
+an exception if appropriate), to return a vector of item_t *'s from
+the file (with a try/catch block), and to print the lines in the
+correct format. 
+
+Hints:
+- Use typedef to make a very long typename more readable.
+- See the documentation for std::exception for the prototype of the
+  what() member function.
+- The function that detects an error is the one that should throw, and
+  the function higher up the call stack that is equipped to handle the
+  error is the one to do try/catch. For example, depending on how you
+  name your functions, parseLine might throw, and itemsFromfile might
+  try/catch an exception resulting from improper format.
+- Don't forget to deallocate memory!

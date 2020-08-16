@@ -1,0 +1,100 @@
+As always, read and understand Chapter 13, then answer these questions
+in "answers.txt". 
+
+1.  Writing a function is analogous to writing a _______.
+
+    A.  sentence
+    B.  paragraph
+    C.  section
+    D.  chapter
+    E.  book
+
+2.  How many things can the typical human brain work with at one time?
+
+    A.  1
+    B.  3
+    C.  7
+    D.  11
+    E.  15
+
+3.  Why is this limit on how many things the brain can work on
+    important for designing programs?
+
+    A.  Programmers love trivia.
+    B.  It suggests the proper length of variable names.
+    C.  It suggests the proper size/complexity of functions.
+    D.  It suggests the number of files that we should divide our code
+        between. 
+    E.  None of the above
+
+4.  Which of the following is NOT a guideline for documentation?
+
+    A.  Document every line.
+    B.  Describe each component.
+    C.  Do not comment the obvious.
+    D.  Document large-scale design.
+    E.  Explain the unexpected.
+
+5.  If you copy something so that it is in two places in your code, then:
+
+    A.  It is not a big deal, as long as it is in only two places
+        (and no more). 
+    B.  It is ok if (and only if) it is relatively simple code that is
+        duplicated. 
+    C.  It is always fine.
+    D.  You are likely to introduce bugs later when you change one but
+        forget to change the other.
+
+6.  Of the following, which are advantages of "Java Style" bracing?
+
+    I.   Uses more whitespace
+    II.  Consistency in brace placement
+    III. Helps avoid errors when modifying code
+
+    A.  I, II, and III
+    B.  I and II
+    C.  I and III
+    D.  II and III
+
+7.  No matter what style you choose, you should always:
+
+    A.  Place the braces for compound initializers on their own
+        lines. 
+    B.  Put braces around single statement bodies of
+        if/while/for/etc. 
+    C.  Write a comment after every brace.
+    D.  Write a comment before every open brace, and after ever close
+        brace. 
+
+8.  In pair programming, the two roles are:
+
+    A.  Designer and implementer
+    B.  Designer and tester
+    C.  Driver and navigator
+    D.  Driver and passenger
+
+Much of this chapter was devoted to the example program involving
+rosters and classes. The next two questions reference this example.
+
+9.  In the roster example, what design/implementation strategy was
+    used? 
+
+    A.  Bottom-up design, bottom-up implementation
+    B.  Bottom-up design, top-down implementation
+    C.  Top-down design, bottom-up implementation
+    D.  Top-down design, top-down implementation
+
+10. When using this implementation strategy, programmers have to think
+    carefully to test early (rather than trying to write the whole
+    program then test). How was early testing accomplished in this
+    roster example? 
+
+    A.  The authors wrote test stubs for the function they had yet to
+        write. 
+    B.  The authors stated that while testing was important, they were
+        skilled enough programmers to only test at the end. 
+    C.  The authors changed main to only read the input and print it,
+        rather than carrying out the later steps in the algorithm.
+    D.  The authors used formal verification to prove their code was
+        correct, rather than testing. 
+    E.  None of the above

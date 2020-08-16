@@ -1,0 +1,97 @@
+In this assignment, you will work with std::list to create a todo list
+from a list of dependencies, relationships between tasks, commonly
+studied in project management.
+
+We choose std::list, an implementation of a linked list data
+structure in the standard template library, because lists do some
+things in O(1), that is, efficiently. The algorithm for adding tasks
+to an answer list will iterate over the answer and add each task in
+the current position if certain criteria is met. While it is O(N) to
+find an arbitrary element in a list, recall that it is O(1) to add to (or
+remove from) the front, back, or at an arbitrary position, if that
+position has already been located. Look at the documentation on
+cplusplus.com for std::list, and verify that member functions
+push_front, insert, and erase have constant complexity (for a single
+element).
+
+At a general level, the program should take one command line argument,
+the name of the file to read dependencies from, open that file for
+reading, and perform these steps, each of which should be abstracted
+out into its own function:
+- Make a dependency list of tasks from the input file
+- Create an answer list, ordered according to dependencies
+- Print the todo list
+
+The provided file task.hpp gives the interface for a TaskDep class,
+which has a task and a list of its predecessors, the tasks that must
+be completed before this task can be done. You should write these
+methods.
+
+In todo_list.cpp, you should write a program that accomplishes the
+described high-level steps, using good abstraction. Here are some more
+details about the algorithm.
+
+The list of TaskDeps should be in the same order they appear in the
+input file. The format of the input file is the same as in your
+parse_input program, so you can use the same logic as that assignment,
+except that you can simply print an error and exit failure if the file
+has incorrect format. This function should call TaskDep's
+addPredecessor.
+
+Next, your program should make the answer list, in the order the tasks
+can be done, according to this algorithm:
+
+- Iterating over the list of TaskDeps, while the list is not empty,
+  for each TaskDep:
+  - Check if every predecessor in that task's list has already been
+    added to the answer list. If so,
+    - Insert the current task into the answer list at the first
+      possible position where this condition has been met
+  - Otherwise,
+    - do nothing for the current TaskDep
+  - Once you reach the end of the TaskDep list, if you removed anything,
+    - Start back at the beginning of these steps
+  - Otherwise,
+    - Print an error message that the dependecies do not allow a todo
+      list to be created and exit failure
+
+For example, in the file simple.txt, the program would make a list of
+TaskDeps in the order the tasks are given in the file. Next, it would
+iterate through this list:
+
+t1 has no predecessors, so add to answer list
+ans = t1
+t2 has one predecessor: t1. t1 is in answer list, so add t2
+ans = t1, t2
+t5 has one predecessor: t4, which is not in answer list
+t3 has two predecessors: t1, t2. t1 and t2 are in answer list, so add t3
+ans = t1, t2, t3
+t8 has two predecessors: t1, t7. t7 is not in answer list
+t4 has no predecessors, so add to answer list
+ans = t4, t1, t2, t3
+t7 has one predecessor: t5, which is not in answer list
+reached end, at least one item has been added to answer, so repeat
+
+t5 has one predecessor: t4. t4 is in answer list, so add t5
+ans = t4, t5, t1, t2, t3
+t8 has two predecessors: t1, t7. t7 is not in answer list
+t7 has one predecessor: t5. t5 is in answer list, so add t7
+ans = t4, t5, t7, t1, t2, t3
+reached end, at least one item has been added to answer, so repeat
+
+t8 has two predecessors: t1, t7. t1 and t7 are in answer list, so add
+t8
+ans = t4, t5, t7, t1, t8, t2, t3
+original list is empty, so we are done
+
+I recommend abstracting out the work of considering each TaskDep,
+possibly adding a task to the answer list, and returning a bool to
+specify whether the task was added.
+
+Finally, the program should print the todo list in the determined
+order, separated by a comma-space (, ):
+
+t4, t5, t7, t1, t8, t2, t3
+
+You should provide a Makefile that compiles the program into an
+executable named todo_list.

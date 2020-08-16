@@ -1,0 +1,70 @@
+Grading at 07/31/2020:00:10:24.877775
+For commit ID bb5e9e05fe17279d6fcbc9efa02b3894e3e2f1ed
+Grading at Thu Jul 30 20:10:07 EDT 2020
+rm -f *.o  *~ correl_matrix
+g++ -c --std=gnu++98 -pedantic -Wall -Werror -ggdb3 -o asset.o asset.cpp
+g++ -c --std=gnu++98 -pedantic -Wall -Werror -ggdb3 -o parse.o parse.cpp
+g++ -c --std=gnu++98 -pedantic -Wall -Werror -ggdb3 -o main.o main.cpp
+g++ -o correl_matrix --std=gnu++98 -pedantic -Wall -Werror -ggdb3 asset.o parse.o main.o
++-----------------------------------------------------------------------+
+Test case 1
+Input Error
+Your program successfully indicated a failure case
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 2
+Input Error
+Your program successfully indicated a failure case
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 3
+Could not open file: No such file or directory
+Your program successfully indicated a failure case
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 4
+number of prices is not the same as assets: Success
+Your program successfully indicated a failure case
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 5
+first line has non-numeric: Success
+Your program successfully indicated a failure case
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 6
+Your file matched the expected output
+                                                         [10/10]
++-----------------------------------------------------------------------+
+Test case 7
+Your file matched the expected output
+                                                         [10/10]
++-----------------------------------------------------------------------+
+Test case 8
+Your file matched the expected output
+                                                         [10/10]
++-----------------------------------------------------------------------+
+Test case 9
+Your file matched the expected output
+                                                         [10/10]
++-----------------------------------------------------------------------+
+Test case 10
+Your file matched the expected output
+                                                         [10/10]
++-----------------------------------------------------------------------+
+Test case 11
+Your file matched the expected output
+                                                         [15/15]
++-----------------------------------------------------------------------+
+Code quality
+Abstration:    Excellent
+Naming:        Excellent
+Formatting:    Excellent
+Documentation: Excellent
+Comments from your grader:
+Great code! It's very clear and easy to follow. Your methods are very well abstracted out, which makes the main file very clear and simple. 
+The comments are clear, but not overwhelming! Excellent job!
+                                                         [10/10]
++-----------------------------------------------------------------------+
+
+Overall Grade: 100

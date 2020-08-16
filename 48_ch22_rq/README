@@ -1,0 +1,91 @@
+As always, read and understand Chapter 22, then answer these questions
+in "answers.txt". 
+
+1.  What is the main idea of binary search?
+
+    A.  Search for two things at once.
+    B.  Split the problem in half at each step.
+    C.  Order the items, so you can search efficiently.
+    D.  Searching a tree is always efficient.
+    E.  None of the above
+
+2.  What do you call a node with no children?
+
+    A.  Orphan node
+    B.  Leaf node
+    C.  Root node
+    D.  Lonely node
+    E.  None of the above
+    
+3.  When is a tree balanced?
+
+    A.  It has exactly the same number of nodes on all paths from the
+        root to null.
+    B.  All levels are fully filled in, except possibly the last one
+        (in which case all nodes on the last level must be filled in
+        from left to right). 
+    C.  Every node has either 0 or 2 children.
+    D.  Every node's children differ in height by at most one.
+    E.  None of the above
+
+4.  What is the worst case access time to find a particular value in a
+    binary search tree with N nodes? 
+
+    A.  O(1)
+    B.  O(lg(N))
+    C.  O(N)
+    D.  O(N^2)
+    E. None of the above
+
+5.  A (balanced) binary search tree can be used to implement a map or
+    set ADT. What restriction is placed on the keys?
+
+    A.  The keys must be a totally ordered type.
+    B.  There cannot be duplicate keys.
+    C.  The keys must be numeric types.
+    D.  The key for the root must be zero.
+    E.  None of the above
+
+6.  When you add to a binary search tree, the new node is inserted:
+
+    A.  At the root
+    B.  As a child of the root
+    C.  As the parent of a leaf node
+    D.  As a leaf node
+    E.  None of the above
+
+For questions 7-10, construct a binary search tree by adding the
+following items (in this order) to an empty tree: 
+9, 7, 81, 4, 32, 16, 99, 1, 6, 22
+
+7.  What are the leaf nodes in the resulting tree?
+
+    A.  1, 7, 32, 99
+    B.  1, 6, 7, 22, 81
+    C.  1, 4, 7, 9
+    D.  4, 16, 32
+    E.  None of the above
+
+8.  What node is 32's left child?
+
+    A.  4
+    B.  9
+    C.  16
+    D.  22
+    E.  None of the above
+
+9.  What is the height of the tree (count a leaf node as height 1)?
+
+    A.  4
+    B.  5
+    C.  6
+    D.  7
+    E.  None of the above
+
+10. Which set of operations would make the tree full?
+
+A. Remove 99, insert 8
+B. Remove 22, insert 35
+C. Remove 6,  insert 191
+D. Remove 1,  insert 25
+E. None of the above

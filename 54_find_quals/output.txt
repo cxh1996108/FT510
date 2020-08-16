@@ -1,0 +1,10 @@
+Username: Simba
+  Age: 26
+  Height: 4.5
+  Attractiveness: 9
+  Interests: exploring politics singing 
+Username: Ariel
+  Age: 31
+  Height: 5.2
+  Attractiveness: 10
+  Interests: antiques boats singing swimming 

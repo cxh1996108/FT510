@@ -1,0 +1,17 @@
+animal:dragon
+animal:cat
+place:cave
+time:minute
+time:month
+adjective:peculiar
+adjective:scary
+adjective:peaceful
+verb:fly
+verb:swim
+verb:sprint
+verb:sleep
+thing:sword
+thing:textbook
+thing:whisker
+thing:heart
+thing:cookie

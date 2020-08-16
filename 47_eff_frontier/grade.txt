@@ -1,0 +1,144 @@
+Grading at 08/12/2020:01:15:26.690741
+For commit ID ce1710386861d73f860eb564eff7f1f55e3a18a0
+Grading at Tue Aug 11 21:14:38 EDT 2020
+rm -f *.o  *~ efficient_frontier
+g++ -c --std=gnu++98 -pedantic -Wall -Werror -ggdb3 -o parse.o parse.cpp
+g++ -c --std=gnu++98 -pedantic -Wall -Werror -ggdb3 -o main.o main.cpp
+g++ -o efficient_frontier --std=gnu++98 -pedantic -Wall -Werror -ggdb3 parse.o main.o
++-----------------------------------------------------------------------+
+Test case 1
+Input Error
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 2
+ROR,volatility
+1.0%,0.78%
+2.0%,1.09%
+3.0%,1.59%
+4.0%,2.13%
+5.0%,2.71%
+6.0%,3.29%
+7.0%,3.88%
+8.0%,4.47%
+9.0%,5.07%
+10.0%,5.67%
+11.0%,6.27%
+12.0%,6.86%
+13.0%,7.46%
+14.0%,8.06%
+15.0%,8.67%
+16.0%,9.27%
+17.0%,9.87%
+18.0%,10.47%
+19.0%,11.07%
+20.0%,11.67%
+21.0%,12.28%
+22.0%,12.88%
+23.0%,13.48%
+24.0%,14.08%
+25.0%,14.69%
+26.0%,15.29%
+Your program did not indicate a failure case
+                                                         [0/2]
++-----------------------------------------------------------------------+
+Test case 3
+Could not open universe file: No such file or directory
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 4
+Could not open correlation file: No such file or directory
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 5
+Assets have wrong format: Success
+Your program successfully indicated a failure case
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 6
+Dimension of correlation matrix is not the same as the number of assets: Success
+Your program successfully indicated a failure case
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 7
+Correlation matrix has wrong mathematical format: Success
+Valgrind reported memory errors
+Your program successfully indicated a failure case
+                                                         [2/4]
++-----------------------------------------------------------------------+
+Test case 8
+Assets have non-numeric value: Success
+Your program successfully indicated a failure case
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 9
+Correlation matrix has non-numeric value: Success
+Your program successfully indicated a failure case
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 10
+Correlation matrix has wrong mathematical format: Success
+Your program successfully indicated a failure case
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 11
+Your file matched the expected output
+                                                         [40/40]
++-----------------------------------------------------------------------+
+Test case 12
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 13
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 14
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Test case 15
+Your file matched the expected output
+                                                         [5/5]
+========================================================================
+Restricted test cases for bonus points
+========================================================================
++-----------------------------------------------------------------------+
+Test case 16
+Your file matched the expected output
+                                                         [10/10]
++-----------------------------------------------------------------------+
+Test case 17
+Your file matched the expected output
+                                                         [5/5]
++-----------------------------------------------------------------------+
+Code quality
+Abstration:    Good
+Naming:        Good
+Formatting:    Good
+Documentation: Good
+Comments from your grader:
+Really nice job generating test cases of your own.
+Abstractionwise, main is a little long. Consider moving option processing to 
+its own function (and check out how getopt sets optind). Classes are good, but 
+why are Portfolio's fields public? Use size_t for size. UnrestrictOptimal and 
+RestrictOptimal aren't part of the parsing—consider encapsulating these in 
+the Portfolio or creating an Optimizer class (also prefer these to be 
+lowercase).
+Names are good, but pay attention to case conventions, and consider improving 
+readability for variables like "A" and "t."
+Formatting has a few indentation irregularities. Consider working in Emacs or 
+running clang-format on your code before submitting.
+Documenting features within functions is good, but should also give more 
+information about what each function does and what a Portfolio is. For this 
+program, documenting the linear algebra operations is especially important, as 
+this is complicated.
+Recommend running 'make clean' before adding to git. 
+Overall, really good work, but there are opportunities to improve OO and a few 
+other things.
+                                                         [8.5/10]
++-----------------------------------------------------------------------+
+
+Overall Grade: 109

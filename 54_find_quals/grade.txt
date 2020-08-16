@@ -1,0 +1,43 @@
+Grading at 07/30/2020:14:39:14.043254
+For commit ID 0804b01813e3afc3730283e853e3b34d8e9e3d29
+Grading at Thu Jul 30 10:38:55 EDT 2020
+Attempting to compile
+rm -r *.o *~ find_quals
+Makefile:11: recipe for target 'clean' failed
+g++ -std=c++11 -pedantic -Wall -Werror -ggdb3 -c find.cpp
+g++ -std=c++11 -pedantic -Wall -Werror -ggdb3 -c profile.cpp
+g++ -o find_quals find.o profile.o
++-----------------------------------------------------------------------+
+Test case 1
+Input Error:2 command line arguments
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 2
+Input Error:2 command line arguments
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 3
+Could not open Profiles: No such file or directory
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 4
+Could not open Profiles: No such file or directory
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 5
+Your file matched the expected output
+  - Valgrind was clean (no errors, no memory leaks)
++-----------------------------------------------------------------------+
+Test case 6
+Your file matched the expected output
+  - Valgrind was clean (no errors, no memory leaks)
++-----------------------------------------------------------------------+
+Test case 7
+Your file matched the expected output
+  - Valgrind was clean (no errors, no memory leaks)
++-----------------------------------------------------------------------+
+Test case 8
+Your file matched the expected output
+  - Valgrind was clean (no errors, no memory leaks)
+
+Overall Grade: A
